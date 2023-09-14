@@ -1,0 +1,18 @@
+.v {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Establece el fondo en negro */
+    color: white; /* Cambia el color del texto a blanco para que sea visible en el fondo oscuro */
+    text-align: center; /* Centra horizontalmente el contenido */
+    padding: 20px; 
+    width: 150; /* Ancho al 100% del contenedor padre */
+    height: 150px; 
+  }
+
+.tit {
+    text-align: center;
+  line-height: 100px;
+    
+  }

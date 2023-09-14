@@ -1,0 +1,58 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+<br>
+<div class="filter-section">
+  <label>Estado</label>
+  <select [(ngModel)]="filterByStatus" (ngModelChange)="filterAttorneysByStatus()">
+    <option value="active">Activos</option>
+    <option value="inactive">Inactivos</option>
+  </select>
+</div>
+
+
+<div class="pt-4">
+<button class="btn btn-primary" (click)="navigateForm()">Nuevo Adolescente</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Tipo de documento</th>
+        <th scope="col">numero de documento</th>
+        <th scope="col">birthdate</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Crimen</th>
+        <th scope="col">Apoderado</th>
+        <th scope="col">acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let adolescente of adolescentes">
+        <th scope="row">{{adolescente.id}}</th>
+        <td>{{adolescente.name}}</td>
+        <td>{{adolescente.father_surname}}</td>
+        <td>{{adolescente.mother_surname}}</td>
+        <td>{{adolescente.document_type}}</td>
+        <td>{{adolescente.document_number}}</td>
+        <td>{{adolescente.birthdate | date: 'dd/MMM/yyyy' }}</td>
+        <td>{{adolescente.cell_phone}}</td>
+        <td>{{adolescente.address}}</td>
+        <td>{{adolescente.gender}}</td>
+        <td>{{adolescente.crime_committed}}</td>
+        <td>{{adolescente.attorney}}</td>      
+        <td>
+          <button *ngIf="filterByStatus === 'inactive'" class="btn btn-success" (click)="restaurarAdolescente(adolescente)">Restaurar</button>
+          <button *ngIf="filterByStatus !== 'inactive'" class="btn btn-warning mr-2" (click)="editarAdolescente(adolescente)">Editar</button>
+          <button *ngIf="filterByStatus !== 'inactive'" class="btn btn-danger" (click)="deleteAdolescente(adolescente.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

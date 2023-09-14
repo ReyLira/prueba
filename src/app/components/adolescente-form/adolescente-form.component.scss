@@ -1,0 +1,59 @@
+/* Estilos para el formulario */
+form {
+    background-color: #f7f7f7; /* Color de fondo del formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: 80%; /* Ancho del formulario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    max-width: 500px; /* Ancho máximo del formulario */
+  }
+  
+  /* Estilos para el título del formulario */
+  h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para los campos de entrada y selección */
+  .form-floating {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .form-select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Estilos para las etiquetas flotantes */
+  .form-floating label {
+    font-size: 14px;
+  }
+  
+  /* Estilos para los botones */
+  .btn {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el botón Guardar */
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Estilos para el botón Cancelar */
+  .btn-light {
+    background-color: #ccc;
+    color: #333;
+  }
+  
